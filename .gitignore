@@ -11,6 +11,7 @@
 #ftp config
 ftp.js
 
+#0_SRC
 node_modules
 dist
 backUp

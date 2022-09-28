@@ -1,5 +1,5 @@
 {
-  "name": "example-1",
+  "name": "DGulp v1.3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "url": ""
   },
   "keywords": [],
-  "author": "Demian & Aleksandra",
+  "author": "Demian171",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.16.8",
