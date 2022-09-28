@@ -1,0 +1,250 @@
+
+header.look {
+  a {
+    color: green;
+  }
+
+}
+
+
+header {
+  position: absolute;
+  z-index: 90;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+  height: 100px;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 160px auto 160px;
+  a {
+    text-decoration: none;
+  }
+  a.header__logo {
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #8D81AC;
+    .logo__svg {
+      margin-right: 15px;
+      svg {
+        width: 43px;
+        height: 42px;
+      }
+    }
+    &:hover {
+      color: white;
+      svg path {
+        stroke: white;
+      }
+      svg polygon {
+        fill: white;
+      }
+    }
+  }
+  .header__panel {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__menu {
+    .menu__list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      margin: 0;
+      .menu__list-item {
+        a {
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 17px;
+          display: flex;
+          align-items: center;
+          color: #8D81AC;
+          padding: 0 24px;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .menu__list-item.buy_btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 24px;
+    height: 100%;
+    a {
+      width: 145px;
+      height: 37px;
+      background: #8D81AC;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      color: white;
+      &:hover {
+        background: white;
+        color: #8D81AC;
+      }
+    }
+  }
+  #menu-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .header {
+    background: #27262a;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 160px auto;
+    grid-template-rows: 55px 55px;
+    height: 120px;
+    padding: 10px 20px;
+    nav.header__menu {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      .menu__list {
+        justify-content: center;
+      }
+    }
+
+    .menu__list-item.buy_btn {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+}
+
+#menu-button {
+  cursor: pointer;
+  .menu-button-open {
+    display: block;
+  }
+
+  .menu-button-close {
+    display: none;
+  }
+}
+
+#menu-button.active {
+  .menu-button-open {
+    display: none;
+  }
+  .menu-button-close {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    .header__menu {
+      .menu__list {
+        .menu__list-item a {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 520px) {
+  .header {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    height: 100px;
+    padding: 0 15px;
+    //position: relative;
+    a.header__logo {
+      font-size: 0;
+      justify-content: flex-start;
+    }
+    .menu__list-item.buy_btn {
+      justify-content: center;
+      margin: 0;
+       a {
+        width: 119px;
+        height: 37px;
+      }
+    }
+    #menu-button {
+      display: flex;
+      grid-column-start: 3;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 1;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .header__menu {
+      display: none;
+      .menu__list {
+        .menu__list-item a {
+          padding: 0 24px;
+        }
+      }
+    }
+    .header__menu.active {
+      display: block;
+      position: absolute;
+      width: 90%;
+      background: #333;
+      grid-column: none;
+      margin: 0 auto;
+      left: 5%;
+      .menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        .menu__list-item {
+          width: 100%;
+          height: 88px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          a {
+            font-size: 26px;
+            line-height: 26px;
+            font-style: normal;
+            font-weight: normal;
+          }
+          &.active, &:hover, {
+            a {
+              margin-left: -8px;
+            }
+            &:before {
+              content: " ";
+              display: block;
+              width: 8px;
+              height: 50px;
+              background: #8D81AC;
+            }
+          }
+        }
+      }
+    }
+  }
+}

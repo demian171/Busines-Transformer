@@ -1,0 +1,300 @@
+@import "../base/reset";
+@import '../fonts/fonts';
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+
+.pricing__wrapper {
+  background: #4a3b4e;
+}
+
+.pricing__title {
+  @include font;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 50px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 84px 0 0;
+}
+
+.pricing__content {
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  justify-content: space-between;
+  column-gap: 16px;
+}
+
+.pricing__cards {
+  max-width: 100%;
+  @include flex-column;
+  text-align: center;
+  background: rgba(255, 255, 255, .11);
+  @include font;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 112px;
+  margin-bottom: 150px;
+  font-weight: normal;
+
+.pricing__cards--title {
+  font-size: 24px;
+  line-height: 24px;
+  background: rgba(255, 255, 255, .06);
+  padding: 36px 0;
+}
+  .pricing__cards--prise {
+    font-size: 60px;
+    line-height: 90px;
+    padding: 30px 0 20px 0;
+  }
+
+  .pricing__cards--validity {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    padding-bottom: 80px;
+    position: relative;
+
+  &::before {
+    content: '';
+    border-bottom: 5px solid #8D81AC;
+    width: 60px;
+    position: absolute;
+    top: 38px;
+    left: 50% - 10%;
+    }
+  }
+  .pricing__cards--service-list {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: none;
+
+  }
+
+  .pricing__cards--button {
+    @include font;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px 38px;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, .15);
+    margin: 36px 46px 36px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, .15) ;
+    display: block;
+
+    &.first {
+      margin: 52px 46px 36px;
+    }
+
+
+  }
+}
+
+.pricing__cards--agency {
+  background: rgba(0, 0, 0, .11);
+  margin-bottom: 96px;
+  margin-top: 60px;
+
+  .pricing__cards--title {
+    font-size: 24px;
+    line-height: 24px;
+    background: rgba(0, 0, 0, .11);
+    padding: 43px 0;
+  }
+  .pricing__cards--prise {
+    font-size: 82px;
+    line-height: 90px;
+    padding: 16px 0;
+  }
+  .pricing__cards--validity {
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 124px;
+    position: relative;
+
+            &::before {
+      content: '';
+      border-bottom: 5px solid #8D81AC;
+      width: 60px;
+      position: absolute;
+      top: 64px;
+      left: 50% - 10%;
+    }
+  }
+  .pricing__cards--service-list {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: none;
+    padding-bottom: 84px ;
+  }
+
+  .pricing__cards--button {
+    @include font;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 14px 38px;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, .15);
+    margin: 0 54px 47px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, .15) ;
+    display: block;
+
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .pricing__cards .pricing__cards--button {
+    padding: 14px 14px;
+  }
+}
+
+
+@media screen and (max-width: 993px) {
+  .pricing__title {
+    margin-bottom: 40px;
+  }
+  .pricing__content {
+    display: grid;
+    grid-template-columns: repeat(2, 32%);
+    justify-content: center;
+    column-gap: 25px;
+    row-gap: 72px;
+  }
+
+  .pricing__cards {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+      .pricing__cards--agency {
+      transform: scale(1.1);
+        margin-top: -10px;
+
+    }
+  .pricing__cards--agency .pricing__cards--validity {
+    padding-bottom: 82px;
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+  .pricing__content {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center;
+    column-gap: 25px;
+    row-gap: 72px;
+  }
+  .pricing__cards .pricing__cards--title {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 36px 0;
+  }
+
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .pricing__content {
+    display: grid;
+    grid-template-columns: repeat(2, 46%);
+    justify-content: center;
+    column-gap: 25px;
+    row-gap: 72px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .pricing__cards--agency .pricing__cards--button {
+    margin: 0 44px 47px;
+  }
+}
+
+@media screen and (max-width: 481px) {
+
+  .pricing__title {
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom:  32px;
+    padding: 14px 44px 0;
+  }
+  .pricing__content {
+    display: grid;
+    grid-template-columns: repeat(1, 72%);
+    justify-content: center;
+    row-gap: 18px;
+  }
+  .pricing__cards--agency {
+    transform: scale(1.1);
+    margin: 30px 0;
+  }
+
+  .pricing__cards .pricing__cards--title {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 36px 0;
+  }
+
+  .pricing__cards .pricing__cards--prise {
+    font-size: 60px;
+    line-height: 90px;
+    padding: 30px 0 20px 0;
+  }
+
+  .pricing__cards .pricing__cards--validity {
+    &::before {
+      content: '';
+      border-bottom: 5px solid #8D81AC;
+      width: 60px;
+      position: absolute;
+      top: 64px;
+      left: 50% - 10%;
+    }
+  }
+
+    .pricing__cards .pricing__cards--button {
+      font-size: 16px;
+      line-height: 18px;
+      padding: 15px 38px;
+      margin: 40px 46px 36px;
+  }
+
+  .pricing__cards--agency .pricing__cards--service-list {
+    padding-bottom: 83px;
+  }
+
+
+
+
+}
+
+@media screen and (max-width: 400px) {
+
+
+  .pricing__content {
+    display: grid;
+    grid-template-columns: repeat(1, 80%);
+    justify-content: center;
+    row-gap: 18px;
+  }
+  .pricing__cards .pricing__cards--button {
+    padding: 15px 24px;
+    margin: 40px 46px 36px;
+  }
+  .pricing__cards--agency .pricing__cards--button {
+    margin: 0 54px 47px;
+  }
+}
