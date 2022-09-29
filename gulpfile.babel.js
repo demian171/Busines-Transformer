@@ -51,6 +51,11 @@ const concatCss = () =>
 
 */
 
+const moveFonts = () =>
+    gulp.src("./src/fonts/**")
+        .pipe(gulp.dest("./dist/fonts/"));
+
+
 const moveHtml = () =>
     gulp.src('./src/*.html')
         .pipe(fileinclude())
@@ -120,14 +125,15 @@ const delDist = () => {
 
 //gulp.task("moveCSS", moveCSS);
 gulp.task("moveIMG", moveIMG);
+gulp.task("moveFonts", moveFonts);
 //gulp.task("concatCss", concatCss);
 gulp.task("moveHtml", moveHtml);
 //gulp.task("buildStyles", buildStyles);
 gulp.task("buildScss", buildScss);
 gulp.task("minifyJs", minifyJs);
 
-gulp.task("moveFiles", gulp.parallel("buildScss", "moveIMG", "minifyJs", "moveHtml"));
-gulp.task("moveCssJs", gulp.parallel("buildScss", "minifyJs"));
+gulp.task("moveFiles", gulp.parallel("buildScss", "moveIMG", "minifyJs", "moveHtml", "moveFonts"));
+gulp.task("moveCssJs", gulp.parallel("buildScss", "minifyJs", "moveFonts"));
 
 gulp.task('mzip', function () {
     let curDate = new Date();
