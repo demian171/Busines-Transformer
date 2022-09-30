@@ -4,6 +4,7 @@ header {
   font-size: 16px;
   height: 118px;
   border-bottom: 1px solid #c5c5c5;
+  text-transform: uppercase;
 
   a {
     text-decoration: none;
@@ -120,107 +121,118 @@ header {
     display: none;
   }
 
-  @media screen and (max-width: 560px) {
-    .nav-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-      background: #1f2227;
-      opacity: 0;
-      transition: all 0.2s ease;
-
-      ul {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100%;
-
-        li {
-          display: block;
-          float: none;
+}
+  @media screen and (max-width: $width-mob) {
+    header {
+      nav {
+        .nav-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100%;
           width: 100%;
-          text-align: right;
-          margin-bottom: 10px;
+          z-index: -1;
+          background: #1f2227;
+          opacity: 0;
+          transition: all 0.2s ease;
 
-          &:nth-child(1) {
-            a {
-              transition-delay: 0.2s;
+          ul {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            flex-direction: column;
+
+            li {
+              display: block;
+              float: none;
+              width: 100%;
+              text-align: right;
+              margin-bottom: 10px;
+
+              &:nth-child(1) {
+                a {
+                  transition-delay: 0.2s;
+                }
+              }
+
+              &:nth-child(2) {
+                a {
+                  transition-delay: 0.3s;
+                }
+              }
+
+              &:nth-child(3) {
+                a {
+                  transition-delay: 0.4s;
+                }
+              }
+
+              &:nth-child(4) {
+                a {
+                  transition-delay: 0.5s;
+                }
+              }
+
+              &:not(:first-child) {
+                margin-left: 0;
+              }
+
+              a {
+                padding: 10px 25px;
+                opacity: 0;
+                color: #fff;
+                font-size: 24px;
+                font-weight: 600;
+                transform: translateY(-20px);
+                transition: all 0.2s ease;
+
+              }
+
+             .lang-switch {
+                padding: 10px 25px;
+              }
             }
           }
+        }
+        .nav-open {
+          position: fixed;
+          right: 10px;
+          top: 10px;
+          display: block;
+          width: 48px;
+          height: 48px;
+          cursor: pointer;
+          z-index: 9999;
+          border-radius: 50%;
 
-          &:nth-child(2) {
-            a {
-              transition-delay: 0.3s;
+          i {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #1f2227;
+            border-radius: 2px;
+            margin-left: 14px;
+
+            &:nth-child(1) {
+              margin-top: 16px;
             }
-          }
 
-          &:nth-child(3) {
-            a {
-              transition-delay: 0.4s;
+            &:nth-child(2) {
+              margin-top: 4px;
+              opacity: 1;
             }
-          }
 
-          &:nth-child(4) {
-            a {
-              transition-delay: 0.5s;
+            &:nth-child(3) {
+              margin-top: 4px;
             }
-          }
-
-          &:not(:first-child) {
-            margin-left: 0;
-          }
-
-          a {
-            padding: 10px 25px;
-            opacity: 0;
-            color: #fff;
-            font-size: 24px;
-            font-weight: 600;
-            transform: translateY(-20px);
-            transition: all 0.2s ease;
           }
         }
       }
     }
-    .nav-open {
-      position: fixed;
-      right: 10px;
-      top: 10px;
-      display: block;
-      width: 48px;
-      height: 48px;
-      cursor: pointer;
-      z-index: 9999;
-      border-radius: 50%;
 
-      i {
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: #1f2227;
-        border-radius: 2px;
-        margin-left: 14px;
-
-        &:nth-child(1) {
-          margin-top: 16px;
-        }
-
-        &:nth-child(2) {
-          margin-top: 4px;
-          opacity: 1;
-        }
-
-        &:nth-child(3) {
-          margin-top: 4px;
-        }
-      }
-    }
   }
 
 
-}
 
 
