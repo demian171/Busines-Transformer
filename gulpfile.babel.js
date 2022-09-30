@@ -51,6 +51,7 @@ const concatCss = () =>
 
 */
 
+
 const moveFonts = () =>
     gulp.src("./src/fonts/**")
         .pipe(gulp.dest("./dist/fonts/"));
@@ -93,7 +94,7 @@ function buildScss() {
         .pipe(purgecss({content: ['src/**/*.html']}))  //убрать неиспользуемые стили
         .pipe(gulp.dest('./dist/css'))
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        // .pipe(sourcemaps.write()) //добавить sourcemap
+        .pipe(sourcemaps.write()) //добавить sourcemap
         .pipe(rename({
             suffix: ".min"
         }))
