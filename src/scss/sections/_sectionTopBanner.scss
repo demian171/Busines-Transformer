@@ -58,9 +58,59 @@
 
     .banner-right {
       width: 50%;
+      position: relative;
+
+      #pulse_holder-1 {
+        position: absolute;
+        left: 12%;
+        top: 17%;
+      }
+
+      #pulse_holder-2 {
+        position: absolute;
+        left: 45%;
+        top: 10%;
+      }
+
+      #pulse_holder-3 {
+        position: absolute;
+        left: 69%;
+        top: 16%;
+      }
+
+      #pulse_holder-4 {
+        position: absolute;
+        left: 84%;
+        top: 37%;
+      }
+
+      #pulse_holder-5 {
+        position: absolute;
+        left: 57%;
+        top: 78%;
+      }
+
+      #pulse_holder-6 {
+        position: absolute;
+        left: 33%;
+        top: 81%;
+      }
+
+      #pulse_holder-7 {
+        position: absolute;
+        left: 25%;
+        top: 74%;
+      }
+
+      #pulse_holder-8 {
+        position: absolute;
+        left: 8%;
+        top: 40%;
+      }
 
       img {
         max-width: 90%;
+        margin-top: -4px;
         @media screen and (max-width: $width-middle) {
           max-width: 530px;
           width: 80%;
@@ -95,4 +145,106 @@
       font-size: 36px;
     }
   }
+
+
+  //pulse buttons on banner *********************/
+  @-webkit-keyframes pulse {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    8% {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+    15% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    30% {
+      transform: scale(0.7);
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes pulse {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    8% {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+    15% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    30% {
+      transform: scale(0.7);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    8% {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+    15% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    30% {
+      transform: scale(0.7);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+
+  .pulse_holder {
+    z-index: 20000;
+    cursor: pointer;
+  }
+
+  .pulse_holder .pulse_marker {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    background-color: #fff;
+    border: 2px solid #bbb;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  .pulse_holder .pulse_rays {
+    margin: 0 auto;
+    position: absolute;
+    left: -13px;
+    top: -13px;
+    z-index: 10;
+    background-color: rgba(185, 185, 185, 0.5);
+    opacity: 0.1;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #bbb;
+    border-radius: 50%;
+    -webkit-animation: pulse 1.3s linear infinite;
+    -o-animation: pulse 1.3s linear infinite;
+    animation: pulse 1.3s linear infinite;
+    border-image: initial;
+  }
+  .pulse_rays:hover {
+    background-color: #ccd;
+  }
+
+
+
 }
