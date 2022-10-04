@@ -9,6 +9,7 @@
   margin: 0 auto;
   margin-bottom: 60px;
   padding: 80px 0 92px 0;
+
   .wrapper {
     max-width: $wrapper-mid;
     margin: 0 auto;
@@ -18,13 +19,28 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
+    @media screen and (max-width: $width-mob) {
+      flex-direction: column;
+
+    }
 
     #container {
       position: absolute;
       top: -60px;
       left: 150px;
+      @media screen and (max-width: $width-mob) {
+        position: inherit;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: -100px;
+      }
+
       canvas {
         transform: scale(1.3);
+        @media screen and (max-width: $width-mob) {
+          transform: scale(1);
+        }
       }
     }
 
@@ -37,6 +53,12 @@
       font-size: 22px;
       padding: 40px;
       width: 500px;
+      @media screen and (max-width: $width-mob) {
+        width: 100%;
+        padding: 20px 20px 20px 50px;
+        margin-top: -100px;
+      }
+
       li {
         list-style: auto;
         padding-left: 8px;
@@ -45,6 +67,7 @@
     }
 
   }
+
   .logoBackground {
     position: absolute;
     z-index: 1;

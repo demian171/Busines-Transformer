@@ -9,13 +9,23 @@
   background: $theme-color-back;
   padding: 40px;
   margin-bottom: 90px;
+  @media screen and (max-width: $width-mob) {
+    padding: 20px;
+  }
 
   .wrapper {
     display: flex;
+    @media screen and (max-width: $width-mob) {
+     flex-direction: column;
+    }
 
     .half {
       width: 50%;
       padding: 20px;
+
+      @media screen and (max-width: $width-mob) {
+        width: 100%;
+      }
 
       .header {
         text-transform: uppercase;
@@ -24,6 +34,9 @@
         color: #cecfd1;
         line-height: 94%;
         margin-bottom: 35px;
+        @media screen and (max-width: $width-mob) {
+          font-size: 40px;
+        }
       }
 
       .form {
@@ -36,6 +49,10 @@
           width: 50%;
           padding-right: 25px;
           margin-bottom: 15px;
+          @media screen and (max-width: $width-mob) {
+            width: 100%;
+            padding-right: 0;
+          }
 
           label {
             font-size: 16px;

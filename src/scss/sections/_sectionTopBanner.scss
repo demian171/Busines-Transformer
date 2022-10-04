@@ -38,6 +38,9 @@
         @media screen and (max-width: $width-middle) {
           text-align: center;
         }
+        @media screen and (max-width: $width-mob) {
+          font-size: 26px;
+        }
       }
       .banner-text-3 {
         font-size: 18px;
@@ -64,20 +67,34 @@
           position: absolute;
           top: -55px;
           width: max-content;
-          background: #601431;
+          //background: $theme-color-1;
           padding: 8px 15px;
           transform: translateX(calc(-50% + 10px));
           color: white;
           font-size: 14px;
-          &::before {
-            content: ' ';
-            display: block;
-            height: 10px;
-            width: 10px;
-            background: white;
-            position: absolute;
-            transform: rotate(-135deg);
-            transform-origin: top left;
+          border: 1px solid white;
+
+          @media screen and (max-width: $width-mob) {
+            display: none;
+          }
+
+        }
+        &::before {
+          content: "";
+          display: block;
+          height: 14px;
+          width: 14px;
+          //background: $theme-color-1;
+          position: absolute;
+          transform: rotate(-135deg);
+          left: 0px;
+          top: -27px;
+          border-left: 1px solid #fff;
+          border-top: 1px solid #fff;
+          z-index: 2;
+
+          @media screen and (max-width: $width-mob) {
+            display: none;
           }
         }
 
@@ -87,48 +104,96 @@
         position: absolute;
         left: 12%;
         top: 17%;
+        .pulse__holder--content {
+          background: $theme-color-1;
+        }
+        &::before {
+          background: $theme-color-1;
+        }
       }
 
       #pulse_holder-2 {
         position: absolute;
         left: 45%;
         top: 10%;
+        .pulse__holder--content {
+          background: $theme-color-2;
+        }
+        &::before {
+          background: $theme-color-2;
+        }
       }
 
       #pulse_holder-3 {
         position: absolute;
         left: 69%;
         top: 16%;
+        .pulse__holder--content {
+          background: $theme-color-1;
+        }
+        &::before {
+          background: $theme-color-1;
+        }
       }
 
       #pulse_holder-4 {
         position: absolute;
         left: 84%;
         top: 37%;
+        .pulse__holder--content {
+          background: $theme-color-2;
+        }
+        &::before {
+          background: $theme-color-2;
+        }
       }
 
       #pulse_holder-5 {
         position: absolute;
         left: 57%;
         top: 78%;
+        .pulse__holder--content {
+          background: $theme-color-1;
+        }
+        &::before {
+          background: $theme-color-1;
+        }
       }
 
       #pulse_holder-6 {
         position: absolute;
         left: 33%;
         top: 81%;
+        .pulse__holder--content {
+          background: $theme-color-2;
+        }
+        &::before {
+          background: $theme-color-2;
+        }
       }
 
       #pulse_holder-7 {
         position: absolute;
         left: 25%;
         top: 74%;
+        .pulse__holder--content {
+          background: $theme-color-1;
+        }
+        &::before {
+          background: $theme-color-1;
+        }
       }
 
       #pulse_holder-8 {
         position: absolute;
         left: 8%;
         top: 40%;
+        .pulse__holder--content {
+          background: $theme-color-2;
+        }
+        &::before {
+          background: $theme-color-2;
+        }
       }
 
       img {
@@ -166,6 +231,7 @@
     }
     @media screen and (max-width: $width-mob) {
       font-size: 36px;
+      text-align: center;
     }
   }
 
@@ -233,7 +299,7 @@
   }
 
   .pulse_holder {
-    z-index: 20000;
+    z-index: 5;
     cursor: pointer;
   }
 
