@@ -58,6 +58,30 @@
     .banner-right {
       width: 50%;
       position: relative;
+      .pulse_holder {
+
+        .pulse__holder--content {
+          position: absolute;
+          top: -55px;
+          width: max-content;
+          background: #601431;
+          padding: 8px 15px;
+          transform: translateX(calc(-50% + 10px));
+          color: white;
+          font-size: 14px;
+          &::before {
+            content: ' ';
+            display: block;
+            height: 10px;
+            width: 10px;
+            background: white;
+            position: absolute;
+            transform: rotate(-135deg);
+            transform-origin: top left;
+          }
+        }
+
+      }
 
       #pulse_holder-1 {
         position: absolute;
