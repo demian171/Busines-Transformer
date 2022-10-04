@@ -4,5 +4,41 @@
 @import '../mixins/mixins';
 
 .section__philosophy {
-  height: 100px;
+  //height: 100px;
+  padding: 40px;
+
+  .wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+
+    .philosophy__row {
+      color: #203865;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      height: 75px;
+      font-weight: bold;
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      .first {
+        width: 265px;
+      }
+
+      .arrow {
+        width: 160px;
+      }
+
+      .last {
+
+      }
+    }
+  }
+
+
+
+
 }

@@ -1,0 +1,45 @@
+@import "../base/reset";
+@import '../fonts/fonts';
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+.section__skill {
+  padding: 40px 60px;
+  .wrapper {
+    max-width: $wrapper-mid;
+    margin: 0 auto;
+
+    .header {
+      font-size: 74px;
+      color: $theme-color-1;
+      margin-bottom: 16px;
+    }
+
+    .subheader {
+      font-size: 28px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .grid-skill {
+      display: flex;
+      flex-wrap: wrap;
+      .skill {
+        width: 33.3%;
+        height: 250px;
+        background: $theme-color-back;
+        border-top: 1px solid #c5c5c5;
+        border-left: 1px solid #c5c5c5;
+      }
+
+      .skill.br {
+        border-right: 1px solid #c5c5c5;
+      }
+
+      .skill.bb {
+        border-bottom: 1px solid #c5c5c5;
+      }
+
+    }
+  }
+}

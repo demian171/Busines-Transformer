@@ -1,0 +1,20 @@
+@import "../base/reset";
+@import '../fonts/fonts';
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+.section__Seo {
+  padding: 40px;
+  .wrapper {
+    max-width: $wrapper-mid;
+    margin: 0 auto;
+
+    .seo_text {
+      font-size: 22px;
+      span {
+        color: $theme-color-2;
+        font-weight: bold;
+      }
+    }
+  }
+}

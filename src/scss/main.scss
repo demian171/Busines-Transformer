@@ -3,6 +3,7 @@
 @import 'mixins/mixins';
 @import "sections/sections";
 @import "base/header";
+@import "base/footer";
 @import "svg/svg";
 
 
@@ -18,12 +19,7 @@ body {
   margin: 0;
   min-width: 320px;
   main {
-    .content,
-    .container {
-      max-width: 1200px;
-      padding: 0 10px;
-      margin: 0 auto;
-    }
+
 
   }
 }
