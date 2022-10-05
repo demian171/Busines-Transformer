@@ -1,4 +1,4 @@
-
+//---------------------------------------     3D model   ----------------------------------//
 var $container = $('#container');
 var renderer = new THREE.WebGLRenderer({antialias: true});
 var camera = new THREE.PerspectiveCamera(80,1,0.1,10000);
@@ -8,7 +8,7 @@ scene.add(camera);
 renderer.setSize(300, 300);
 $container.append(renderer.domElement);
 
-///////////////////////////////////////////////
+
 
 // Camera
 camera.position.z = 200;
@@ -54,3 +54,4 @@ function render() {
 }
 
 render();
+//---------------------------------------    END 3D model   ----------------------------------//

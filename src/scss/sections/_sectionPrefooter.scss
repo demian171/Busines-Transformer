@@ -9,6 +9,10 @@
   margin: 0 auto;
   margin-bottom: 60px;
   padding: 80px 0 92px 0;
+  @media screen and (max-width: $width-mob) {
+    padding: 80px 20px 20px 20px;
+    margin-bottom: 0px;
+  }
 
   .wrapper {
     max-width: $wrapper-mid;
@@ -28,6 +32,7 @@
       position: absolute;
       top: -60px;
       left: 150px;
+      z-index: 2;
       @media screen and (max-width: $width-mob) {
         position: inherit;
         margin: 0 auto;
@@ -50,9 +55,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      font-size: 22px;
+      font-size: 20px;
       padding: 40px;
       width: 500px;
+      z-index: 3;
       @media screen and (max-width: $width-mob) {
         width: 100%;
         padding: 20px 20px 20px 50px;
@@ -71,12 +77,16 @@
   .logoBackground {
     position: absolute;
     z-index: 1;
-    //font-size: 96px;
     bottom: 0;
     left: 0;
     font-weight: 800;
-    color: $theme-color-back;
-    line-height: 100%;
+    color: #2b4676;
+    line-height: 80%;
     font-size: 132px;
+    @media screen and (max-width: $width-mob) {
+      font-size: 120px;
+      left: auto;
+      right: 0;
+    }
   }
 }

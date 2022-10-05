@@ -4,32 +4,34 @@
 @import '../mixins/mixins';
 
 .section__Form {
-  max-width: $wrapper-big;
+  max-width: $wrapper-mid;
   margin: 0 auto;
   background: $theme-color-back;
   padding: 40px;
   margin-bottom: 90px;
   @media screen and (max-width: $width-mob) {
     padding: 20px;
+    background: none;
   }
 
   .wrapper {
     display: flex;
-    @media screen and (max-width: $width-mob) {
+    @media screen and (max-width: $width-middle) {
      flex-direction: column;
+      background: $theme-color-back;
     }
 
     .half {
       width: 50%;
       padding: 20px;
 
-      @media screen and (max-width: $width-mob) {
+      @media screen and (max-width: $width-middle) {
         width: 100%;
       }
 
       .header {
         text-transform: uppercase;
-        font-size: 74px;
+        font-size: 70px;
         font-weight: 800;
         color: #cecfd1;
         line-height: 94%;
@@ -76,8 +78,8 @@
 
           textarea, textarea:focus-visible {
             width: 100%;
-            height: 232px;
-            margin-bottom: 20px;
+            height: 228px;
+            margin-bottom: 64px;
             border: 1px solid #c3c3c3;
             outline: none;
             padding: 10px;
@@ -94,15 +96,23 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
+            //margin: 4px 2px;
             cursor: pointer;
             min-width: 45%;
             align-self: end;
+            font-family: 'Geometria';
           }
 
         }
 
-        .input_container.name, .input_container.text {
+        .input_container.name {
+          margin-right: 20px;
+          @media screen and (max-width: $width-mob) {
+            margin-right: 0;
+          }
+        }
+
+        .input_container.text {
           width: 100%;
         }
       }
