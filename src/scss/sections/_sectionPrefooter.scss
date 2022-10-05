@@ -84,9 +84,11 @@
     line-height: 80%;
     font-size: 132px;
     @media screen and (max-width: $width-mob) {
-      font-size: 120px;
+      font-size: 60px;
+      //line-height: 48px;
       left: auto;
       right: 0;
+      bottom: -6px;
     }
   }
 }

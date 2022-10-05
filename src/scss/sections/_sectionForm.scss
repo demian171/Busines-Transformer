@@ -74,6 +74,9 @@
             font-size: 18px;
             color: gray;
             outline: none;
+            @media screen and (max-width: $width-mob) {
+              margin-bottom: 10px;
+            }
           }
 
           textarea, textarea:focus-visible {
@@ -85,6 +88,9 @@
             padding: 10px;
             font-size: 18px;
             color: gray;
+            @media screen and (max-width: $width-mob) {
+              margin-bottom: 40px;
+            }
           }
 
           .button {
@@ -101,6 +107,9 @@
             min-width: 45%;
             align-self: end;
             font-family: 'Geometria';
+            @media screen and (max-width: $width-mob) {
+              width: 100%;
+            }
           }
 
         }
@@ -114,6 +123,12 @@
 
         .input_container.text {
           width: 100%;
+        }
+      }
+
+      &.right {
+        @media screen and (max-width: $width-mob) {
+          padding-top: 0;
         }
       }
     }

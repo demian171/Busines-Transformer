@@ -38,7 +38,8 @@
         max-width: 45%;
         margin-bottom: 20px;
         @media screen and (max-width: $width-mob) {
-          max-width: 90%;
+          width: 90%;
+          max-width: 255px;
         }
       }
 
@@ -53,10 +54,27 @@
           font-size: 26px;
         }
       }
+
       .banner-text-3 {
         font-size: 18px;
         //line-height: 150%;
         font-style: italic;
+
+        .sec-row {
+          display: block;
+          @media screen and (max-width: $width-mob) {
+            //display: inline-block;
+          }
+        }
+
+        .author {
+          display: block;
+          font-weight: 500;
+          @media screen and (max-width: $width-mob) {
+            //display: block;
+          }
+
+        }
       }
 
 
@@ -65,6 +83,7 @@
     .banner-right {
       width: 50%;
       position: relative;
+
       .pulse_holder {
 
         .pulse__holder--content {
@@ -84,6 +103,7 @@
           }
 
         }
+
         &::before {
           content: "";
           display: block;
@@ -109,9 +129,11 @@
         position: absolute;
         left: 12%;
         top: 17%;
+
         .pulse__holder--content {
           background: $theme-color-1;
         }
+
         &::before {
           background: $theme-color-1;
         }
@@ -121,9 +143,11 @@
         position: absolute;
         left: 45%;
         top: 12%;
+
         .pulse__holder--content {
           background: $theme-color-2;
         }
+
         &::before {
           background: $theme-color-2;
         }
@@ -133,9 +157,11 @@
         position: absolute;
         left: 69%;
         top: 16%;
+
         .pulse__holder--content {
           background: $theme-color-1;
         }
+
         &::before {
           background: $theme-color-1;
         }
@@ -145,9 +171,11 @@
         position: absolute;
         left: 84%;
         top: 37%;
+
         .pulse__holder--content {
           background: $theme-color-2;
         }
+
         &::before {
           background: $theme-color-2;
         }
@@ -157,9 +185,11 @@
         position: absolute;
         left: 57%;
         top: 78%;
+
         .pulse__holder--content {
           background: $theme-color-1;
         }
+
         &::before {
           background: $theme-color-1;
         }
@@ -169,9 +199,11 @@
         position: absolute;
         left: 33%;
         top: 81%;
+
         .pulse__holder--content {
           background: $theme-color-2;
         }
+
         &::before {
           background: $theme-color-2;
         }
@@ -181,9 +213,11 @@
         position: absolute;
         left: 11%;
         top: 74%;
+
         .pulse__holder--content {
           background: $theme-color-1;
         }
+
         &::before {
           background: $theme-color-1;
         }
@@ -193,9 +227,11 @@
         position: absolute;
         left: 8%;
         top: 40%;
+
         .pulse__holder--content {
           background: $theme-color-2;
         }
+
         &::before {
           background: $theme-color-2;
         }
@@ -231,11 +267,12 @@
     font-size: 100px;
     font-weight: bold;
     margin-bottom: 45px;
-    @media (max-width: $wrapper-mid) and (min-width: $width-middle) {
+    @media (max-width: 1400px) and (min-width: $width-middle) {
       font-size: 80px;
     }
     @media screen and (max-width: $width-middle) {
       font-size: 48px;
+      text-align: center;
     }
     @media screen and (max-width: $width-mob) {
       font-size: 36px;
@@ -338,10 +375,10 @@
     animation: pulse 1.3s linear infinite;
     border-image: initial;
   }
+
   .pulse_rays:hover {
     background-color: #ccd;
   }
-
 
 
 }

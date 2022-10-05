@@ -4,9 +4,9 @@
 @import '../mixins/mixins';
 
 .section__Seo {
-  padding: 40px;
+  padding: 60px;
   @media screen and (max-width: $width-mob) {
-    padding: 20px;
+    padding: 40px;
   }
   .wrapper {
     max-width: $wrapper-mid;
@@ -21,6 +21,10 @@
       span {
         color: $theme-color-2;
         font-weight: bold;
+        @media screen and (max-width: $width-mob) {
+          display: block;
+          padding: 10px 0;
+        }
       }
     }
   }
