@@ -36,10 +36,11 @@
 
       img {
         max-width: 45%;
-        margin-bottom: 20px;
+        //margin-bottom: 20px;
         @media screen and (max-width: $width-mob) {
           width: 90%;
           max-width: 255px;
+          //margin-bottom: 20px;
         }
       }
 
@@ -52,6 +53,7 @@
         }
         @media screen and (max-width: $width-mob) {
           font-size: 26px;
+          margin-bottom: 15px;
         }
       }
 
@@ -59,11 +61,15 @@
         font-size: 18px;
         //line-height: 150%;
         font-style: italic;
+        @media screen and (max-width: $width-mob) {
+          margin-bottom: 30px;
+          text-align: center;
+        }
 
         .sec-row {
           display: block;
           @media screen and (max-width: $width-mob) {
-            //display: inline-block;
+            display: contents;
           }
         }
 
@@ -71,7 +77,7 @@
           display: block;
           font-weight: 500;
           @media screen and (max-width: $width-mob) {
-            //display: block;
+            display: contents;
           }
 
         }
@@ -83,6 +89,19 @@
     .banner-right {
       width: 50%;
       position: relative;
+
+
+      @media screen and (max-width: $width-middle) {
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      @media screen and (max-width: $width-mob) {
+        width: 100%;
+        //overflow: hidden;
+      }
 
       .pulse_holder {
 
@@ -99,7 +118,8 @@
           border-radius: 6px;
 
           @media screen and (max-width: $width-mob) {
-            display: none;
+            font-size: 10px;
+            top: -50px;
           }
 
         }
@@ -119,7 +139,10 @@
           z-index: 2;
 
           @media screen and (max-width: $width-mob) {
-            display: none;
+            //display: none;
+            top: -25px;
+            height: 10px;
+            width: 10px;
           }
         }
 
@@ -129,6 +152,10 @@
         position: absolute;
         left: 12%;
         top: 17%;
+        @media screen and (max-width: $width-mob) {
+          left: 15%;
+          top: 16%;
+        }
 
         .pulse__holder--content {
           background: $theme-color-1;
@@ -139,10 +166,15 @@
         }
       }
 
+
       #pulse_holder-2 {
         position: absolute;
         left: 45%;
         top: 12%;
+        @media screen and (max-width: $width-mob) {
+          left: 45%;
+          top: 3%;
+        }
 
         .pulse__holder--content {
           background: $theme-color-2;
@@ -157,6 +189,10 @@
         position: absolute;
         left: 69%;
         top: 16%;
+        @media screen and (max-width: $width-mob) {
+          left: 74%;
+          top: 15%;
+        }
 
         .pulse__holder--content {
           background: $theme-color-1;
@@ -171,6 +207,10 @@
         position: absolute;
         left: 84%;
         top: 37%;
+        @media screen and (max-width: $width-mob) {
+          left: 79%;
+          top: 44%;
+        }
 
         .pulse__holder--content {
           background: $theme-color-2;
@@ -185,6 +225,10 @@
         position: absolute;
         left: 57%;
         top: 78%;
+        @media screen and (max-width: $width-mob) {
+          left: 72%;
+          top: 73%;
+        }
 
         .pulse__holder--content {
           background: $theme-color-1;
@@ -199,6 +243,10 @@
         position: absolute;
         left: 33%;
         top: 81%;
+        @media screen and (max-width: $width-mob) {
+          left: 47%;
+          top: 88%;
+        }
 
         .pulse__holder--content {
           background: $theme-color-2;
@@ -213,6 +261,10 @@
         position: absolute;
         left: 11%;
         top: 74%;
+        @media screen and (max-width: $width-mob) {
+          left: 13%;
+          top: 77%;
+        }
 
         .pulse__holder--content {
           background: $theme-color-1;
@@ -227,6 +279,10 @@
         position: absolute;
         left: 8%;
         top: 40%;
+        @media screen and (max-width: $width-mob) {
+          left: 14%;
+          top: 48%;
+        }
 
         .pulse__holder--content {
           background: $theme-color-2;
@@ -244,14 +300,12 @@
           max-width: 530px;
           width: 80%;
         }
+        @media screen and (max-width: $width-mob) {
+          max-width: 100%;
+          width: 100%;
+        }
       }
 
-      @media screen and (max-width: $width-middle) {
-        flex-direction: column;
-        width: 100%;
-        display: flex;
-        align-items: center;
-      }
     }
 
     @media screen and (max-width: $width-middle) {

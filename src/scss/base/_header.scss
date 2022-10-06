@@ -20,7 +20,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    //width: 230px;
+    //min-width: 110px;
     margin-left: 80px;
     margin-right: 40px;
     @media screen and (max-width: $width-middle) {
@@ -36,6 +36,8 @@ header {
     }
 
     img {
+      width: 122px;
+      height: auto;
       @media screen and (max-width: $width-mob) {
         width: 70px;
         height: auto;
@@ -149,7 +151,7 @@ header {
           transform: rotate(45deg);
 
           i {
-            background: #fff;
+            background: #000;
             transition: transform 0.2s ease;
 
             &:nth-child(1) {
