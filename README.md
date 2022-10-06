@@ -9,15 +9,6 @@ gulp mzip   - make back up by current date
 ```
 
 
-Git:
-```
-git add . 
-git commit -m " "
-git push
-
-git pull   
-```
-
 
 
 

@@ -1,0 +1,29 @@
+@import "../base/reset";
+@import '../fonts/fonts';
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+.section__Map {
+
+  .info {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    z-index: 1;
+  }
+
+  .map {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    //height: 600px;
+
+    img {
+      width: 65%;
+    }
+
+
+  }
+}
